@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        tools:showIn="navigation_view">
+
+        <group android:checkableBehavior="single">
+            <item
+                android:id="@+id/nav_home"
+                android:icon="@drawable/ic_menu_manage"
+                android:title="@string/menu_home" />
+            <item
+                android:id="@+id/relatorio"
+                android:title="@string/relat_rio_de_consumo" />
+            <item
+                android:id="@+id/rotina"
+                android:title="@string/an_lise_de_rotina" />
+
+            <item
+                android:id="@+id/sobre"
+                android:title="@string/sobre" />
+
+        </group>
+
+    </menu>
