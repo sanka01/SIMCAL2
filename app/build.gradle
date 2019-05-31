@@ -7,7 +7,7 @@ apply plugin: 'kotlin-android-extensions'
 android {
     compileSdkVersion 28
     defaultConfig {
-        applicationId "com.example.simcal"
+        applicationId "com.disp_moveis.simcal"
         minSdkVersion 21
         targetSdkVersion 28
         versionCode 1
@@ -20,6 +20,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
+    compileOptions {
+        sourceCompatibility = "1.8"
+        targetCompatibility = 1.8
+    }
+    buildToolsVersion = '29.0.0 rc3'
 }
 
 dependencies {
