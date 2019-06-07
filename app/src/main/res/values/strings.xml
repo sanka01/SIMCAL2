@@ -31,4 +31,7 @@
     <string name="cria_comodo">Cria Comodo</string>
     <string name="nome">Nome</string>
     <string name="c_modos">Cômodos</string>
+    <string name="simcal">SIMCAL</string>
+    <string name="link_git">https://github.com/sanka01/SIMCAL2</string>
+    <string name="devs">Criado por: Samuel Morais, Nilvan Lopes, Emilly Piazza e Patrick Aires</string>
 </resources>

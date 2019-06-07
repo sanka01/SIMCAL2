@@ -23,11 +23,7 @@ import kotlinx.android.synthetic.main.content_main.*
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
     var lista_dispositivos: ArrayList<Dispositivo> = arrayListOf()
 
-    internal var lista_comodos: MutableList<Comodo> = mutableListOf(
-        Comodo("Sala"),
-        Comodo("Cozinha"),
-        Comodo("Quarto")
-    )
+    internal var lista_comodos: MutableList<Comodo> = mutableListOf()
     lateinit var comodoAdapter: ListComodoAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
