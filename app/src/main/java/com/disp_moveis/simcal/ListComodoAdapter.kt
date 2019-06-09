@@ -30,7 +30,7 @@ class ListComodoAdapter(
 
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val nome = itemView.buttonSala
+        val nome = itemView.room_item
 
         fun bindView(comodo: Comodo){
             nome.text = comodo.nome
