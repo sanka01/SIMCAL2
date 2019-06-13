@@ -1,4 +1,4 @@
-package com.disp_moveis.simcal.data.model
+package com.disp_moveis.simcal.control.data.model
 
 /**
  * Data class that captures user information for logged in users retrieved from LoginRepository

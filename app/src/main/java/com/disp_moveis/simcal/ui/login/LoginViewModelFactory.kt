@@ -2,8 +2,8 @@ package com.disp_moveis.simcal.ui.login
 
 import android.arch.lifecycle.ViewModel
 import android.arch.lifecycle.ViewModelProvider
-import com.disp_moveis.simcal.data.LoginDataSource
-import com.disp_moveis.simcal.data.LoginRepository
+import com.disp_moveis.simcal.control.data.LoginDataSource
+import com.disp_moveis.simcal.control.data.LoginRepository
 
 /**
  * ViewModel provider factory to instantiate LoginViewModel.

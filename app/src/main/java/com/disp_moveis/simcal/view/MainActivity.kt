@@ -1,4 +1,4 @@
-package com.disp_moveis.simcal
+package com.disp_moveis.simcal.view
 
 import android.app.AlertDialog
 import android.content.Intent
@@ -15,9 +15,14 @@ import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
-import com.disp_moveis.simcal.R.layout.*
+import com.disp_moveis.simcal.control.ListComodoAdapter
+import com.disp_moveis.simcal.R
 import com.disp_moveis.simcal.model.Comodo
 import com.disp_moveis.simcal.model.Dispositivo
+import kotlinx.android.synthetic.main.activity_locales.*
+import kotlinx.android.synthetic.main.app_bar_comodos.*
+import kotlinx.android.synthetic.main.app_bar_comodos.add_locale
+import kotlinx.android.synthetic.main.app_bar_comodos.top_bar_navigation
 import kotlinx.android.synthetic.main.content_main.*
 
 class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelectedListener {
@@ -29,18 +34,16 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val toolbar: Toolbar = findViewById(R.id.top_bar_navigation)
+        val toolbar: Toolbar = top_bar_navigation
         setSupportActionBar(toolbar)
 
-//        val fab: FloatingActionButton = findViewById(R.id.fab)
-//        fab.setOnClickListener { view ->
-//            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                .setAction("Action", null).show()
-//        }
+
         val drawerLayout: DrawerLayout = findViewById(R.id.drawer_layout)
         val navView: NavigationView = findViewById(R.id.nav_view)
         val toggle = ActionBarDrawerToggle(
-            this, drawerLayout, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close
+            this, drawerLayout, toolbar,
+            R.string.navigation_drawer_open,
+            R.string.navigation_drawer_close
         )
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
@@ -50,6 +53,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         recyclerViewComodos.layoutManager = LinearLayoutManager(this)
         recyclerViewComodos.smoothScrollToPosition(lista_comodos.size)
 
+//        preparaButtonComodo()
 
         navView.setNavigationItemSelectedListener(this)
         preparaButtons()
@@ -57,20 +61,24 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     }
 
     fun preparaButtons() {
-//        var botaoSala = findViewById<Button>(R.id.buttonSala)
-        var botaoAddComodo = findViewById<Button>(R.id.add_locale)
-
+        var botaoAddComodo = add_locale
         botaoAddComodo.setOnClickListener {
             abrePopUp()
 
 
         }
-//        botaoSala.setOnClickListener {
 
-//        }
 
     }
 
+    fun preparaButtonComodo(btn:Button, comodo: Comodo){
+        btn.setOnClickListener {
+            var trocaTela = Intent(this, ComodoActivity::class.java)
+
+            trocaTela.putExtra("objComodo",comodo)
+            startActivity(trocaTela)
+        }
+    }
     fun addComodo(nome: String): Boolean {
         val novo_comodo = Comodo(nome)
         for (comodo: Comodo in lista_comodos) {
@@ -85,7 +93,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
     fun abrePopUp() {
         var nomeComodo: EditText
         val inflater = this.layoutInflater
-        val view = inflater.inflate(novo_comodo_layout, null)
+        val view = inflater.inflate(R.layout.novo_comodo_layout, null)
         // Initialize a new instance of
         val builder = AlertDialog.Builder(this@MainActivity)
 
@@ -151,19 +159,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         // Handle navigation view item clicks here.
         when (item.itemId) {
             R.id.nav_home -> {
-                var trocaTela = Intent(this.baseContext, content_main::class.java)
+                var trocaTela = Intent(this, MainActivity::class.java)
                 startActivity(trocaTela)
             }
             R.id.relatorio -> {
-                val trocaTela = Intent(this.baseContext, activity_relatorio::class.java)
+                val trocaTela = Intent(this, RelatorioActivity::class.java)
                 startActivity(trocaTela)
             }
             R.id.rotina -> {
-                val trocaTela = Intent(this.baseContext, activity_relatorio::class.java)
+                val trocaTela = Intent(this, RelatorioActivity::class.java)
                 startActivity(trocaTela)
             }
             R.id.sobre -> {
-                val trocaTela = Intent(this.baseContext, activity_sobre::class.java)
+                val trocaTela = Intent(this, SobreActivity::class.java)
                 startActivity(trocaTela)
             }
 

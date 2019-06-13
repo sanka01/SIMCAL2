@@ -2,18 +2,18 @@
     <string name="app_name">SIMCAL</string>
     <!-- Strings related to login -->
     <string name="prompt_email">Email</string>
-    <string name="prompt_password">Password</string>
+    <string name="prompt_password">Senha</string>
     <string name="action_sign_in">Sign in or register</string>
     <string name="action_sign_in_short">Sign in</string>
-    <string name="welcome">"Welcome !"</string>
-    <string name="invalid_username">Not a valid username</string>
-    <string name="invalid_password">Password must be >5 characters</string>
-    <string name="login_failed">"Login failed"</string>
+    <string name="welcome">"Bem-Vindo!"</string>
+    <string name="invalid_username">Usuario invalido</string>
+    <string name="invalid_password">A senha deve possuir mais de 5 caracteres</string>
+    <string name="login_failed">"Login falhou"</string>
     <string name="title_activity_main">MainActivity</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
-    <string name="nav_header_title">Android Studio</string>
-    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_title">Criado por: Samuel Morais, Nilvan Lopes, Emilly Piazza e Patrick Aires</string>
+    <string name="nav_header_subtitle">https://github.com/sanka01/SIMCAL2</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
 
@@ -34,4 +34,9 @@
     <string name="simcal">SIMCAL</string>
     <string name="link_git">https://github.com/sanka01/SIMCAL2</string>
     <string name="devs">Criado por: Samuel Morais, Nilvan Lopes, Emilly Piazza e Patrick Aires</string>
+    <string name="dispositivos">Dispositivos</string>
+    <string name="a_cafeteira_foi_a_a_mais_utilizada_durante_os_ultimos_meses">A cafeteira foi a a mais utilizada durante os ultimos meses</string>
+    <string name="esse_aplicativo_foi_criado_como_trabalho_para_a_mat_ria_de_dispositivos_m_veis_na_unitins_ministrada_pelo_professor_jocivan_feito_pelos_alunos_emily_piazza_lopes_samuel_silva_morais_patrick_aires_nilvan">Esse Aplicativo foi criado como trabalho para a matéria de Dispositivos Móveis, na Unitins, ministrada pelo professor Jocivan. Feito pelos alunos: Emily Piazza lopes Samuel Silva Morais Patrick Aires Nilvan</string>
+    <string name="cafeteira">Cafeteira</string>
+    <string name="grafico">Grafico</string>
 </resources>

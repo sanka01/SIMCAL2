@@ -1,4 +1,4 @@
-package com.disp_moveis.simcal
+package com.disp_moveis.simcal.control
 
 import android.content.Context
 import android.support.v7.widget.RecyclerView
@@ -19,7 +19,7 @@ class ListComodoAdapter(
         return ViewHolder(view)
     }
 
-    override fun getItemCount()= list_comodo.size
+    override fun getItemCount() = list_comodo.size
 
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
@@ -32,7 +32,7 @@ class ListComodoAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val nome = itemView.room_item
 
-        fun bindView(comodo: Comodo){
+        fun bindView(comodo: Comodo) {
             nome.text = comodo.nome
 
 

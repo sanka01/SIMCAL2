@@ -1,6 +1,6 @@
-package com.disp_moveis.simcal.data
+package com.disp_moveis.simcal.control.data
 
-import com.disp_moveis.simcal.data.model.LoggedInUser
+import com.disp_moveis.simcal.control.data.model.LoggedInUser
 
 /**
  * Class that requests authentication and user information from the remote data source and

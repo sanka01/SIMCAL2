@@ -15,7 +15,7 @@ import android.widget.Button
 import android.widget.EditText
 import android.widget.ProgressBar
 import android.widget.Toast
-import com.disp_moveis.simcal.MainActivity
+import com.disp_moveis.simcal.view.MainActivity
 
 import com.disp_moveis.simcal.R
 
@@ -109,7 +109,7 @@ class LoginActivity : AppCompatActivity() {
 //            Toast.LENGTH_LONG
 //        ).show()
 
-        var trocaTela = Intent(this.baseContext,MainActivity::class.java)
+        var trocaTela = Intent(this.baseContext, MainActivity::class.java)
         startActivity(trocaTela)
     }
 

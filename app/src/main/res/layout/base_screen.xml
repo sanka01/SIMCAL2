@@ -3,35 +3,62 @@
                                              xmlns:app="http://schemas.android.com/apk/res-auto"
                                              xmlns:tools="http://schemas.android.com/tools"
                                              android:layout_width="match_parent"
-                                             android:layout_height="match_parent">
+                                             android:layout_height="match_parent"
+        >
 
-    <ImageView
-            android:layout_width="421dp"
-            android:layout_height="87dp" app:srcCompat="@drawable/top_bar_navigation"
-            android:id="@+id/topbarview"
-            app:layout_constraintBottom_toTopOf="@+id/contentview"
+    <!--<ImageView-->
+            <!--android:layout_width="421dp"-->
+            <!--android:layout_height="87dp"-->
+            <!--app:srcCompat="@drawable/top_bar_navigation"-->
+            <!--android:id="@+id/topbarview"-->
+            <!--app:layout_constraintBottom_toTopOf="@+id/contentview"-->
+            <!--app:layout_constraintStart_toStartOf="parent"-->
+            <!--app:layout_constraintTop_toTopOf="parent"-->
+            <!--app:layout_constraintEnd_toEndOf="parent"/>-->
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/foreground"
+            >
+    
+        <Button
+                android:layout_width="54dp"
+                android:layout_height="51dp"
+                android:id="@+id/button_menu"
+                android:background="@drawable/button_menu"
+                android:backgroundTint="@android:color/transparent"
+                android:backgroundTintMode="add"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="12dp"
+                />
+    
+        <TextView
+                android:text="SIMCAL"
+                android:layout_width="264dp"
+                android:layout_height="38dp"
+                android:id="@+id/title_window"
+                android:layout_marginStart="44dp"
+                android:layout_marginBottom="24dp"
+                android:textAlignment="center"
+                android:elegantTextHeight="true"
+                android:textColor="#FCFCFAFA"
+                android:textSize="30sp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display4"/>
+    </LinearLayout>
+    
+    <view
+            android:layout_width="406dp"
+            android:layout_height="658dp"
+            class="android.support.constraint.ConstraintLayout"
+            id="@+id/view"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" app:layout_constraintEnd_toEndOf="parent"/>
-    <Button
-            android:layout_width="54dp"
-            android:layout_height="51dp"
-            android:id="@+id/button_menu" android:background="@drawable/button_menu"
-            android:backgroundTint="@android:color/transparent" android:backgroundTintMode="add"
-            android:layout_marginStart="20dp" app:layout_constraintStart_toStartOf="@+id/topbarview"
-            android:layout_marginBottom="12dp" app:layout_constraintBottom_toBottomOf="@+id/topbarview"/>
-    <TextView
-            android:text="SIMCAL"
-            android:layout_width="264dp"
-            android:layout_height="38dp"
-            android:id="@+id/title_window" app:layout_constraintStart_toEndOf="@+id/button_menu"
-            android:layout_marginStart="44dp" android:layout_marginBottom="24dp"
-            app:layout_constraintBottom_toBottomOf="@+id/topbarview" android:textAlignment="center"
-            android:elegantTextHeight="true" android:textColor="#FCFCFAFA" android:textSize="30sp"
-            android:textStyle="bold" android:textAppearance="@style/TextAppearance.AppCompat.Display4"/>
-    <view android:layout_width="406dp" android:layout_height="658dp"
-          class="android.support.constraint.ConstraintLayout"
-          id="@+id/view" app:layout_constraintStart_toStartOf="parent" android:id="@+id/contentview"
-          android:layout_marginTop="4dp" app:layout_constraintTop_toBottomOf="@+id/topbarview"
-          app:layout_constraintEnd_toEndOf="parent" android:layout_marginEnd="3dp"
-          app:layout_constraintBottom_toBottomOf="parent" app:layout_constraintHorizontal_bias="0.0"/>
+            android:id="@+id/contentview"
+            android:layout_marginTop="4dp"
+   
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginEnd="3dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"/>
 </android.support.constraint.ConstraintLayout>

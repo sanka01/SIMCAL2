@@ -1,4 +1,4 @@
-package com.disp_moveis.simcal.data
+package com.disp_moveis.simcal.control.data
 
 /**
  * A generic class that holds a value with its loading status.

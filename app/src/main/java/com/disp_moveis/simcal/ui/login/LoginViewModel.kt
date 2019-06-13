@@ -4,8 +4,8 @@ import android.arch.lifecycle.LiveData
 import android.arch.lifecycle.MutableLiveData
 import android.arch.lifecycle.ViewModel
 import android.util.Patterns
-import com.disp_moveis.simcal.data.LoginRepository
-import com.disp_moveis.simcal.data.Result
+import com.disp_moveis.simcal.control.data.LoginRepository
+import com.disp_moveis.simcal.control.data.Result
 
 import com.disp_moveis.simcal.R
 

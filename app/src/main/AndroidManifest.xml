@@ -12,7 +12,7 @@
             android:supportsRtl="true"
             android:theme="@style/AppTheme" >
         <activity
-                android:name=".MainActivity"
+                android:name=".view.MainActivity"
                 android:label="@string/title_activity_main"
                 android:parentActivityName="com.disp_moveis.simcal.ui.login.LoginActivity"
                 android:theme="@style/AppTheme.NoActionBar">
@@ -29,8 +29,10 @@
             <category android:name="android.intent.category.LAUNCHER"/>
         </intent-filter>
     </activity>
-        <activity android:name=".RelatorioActivity"/>
-        <activity android:name=".SobreActivity"/>
+        <activity android:name=".view.RelatorioActivity"/>
+        <activity android:name=".view.SobreActivity"/>
+        <activity android:name=".view.ComodoActivity"/>
+    
         <meta-data android:name="preloaded_fonts" android:resource="@array/preloaded_fonts"/>
     </application>
 
