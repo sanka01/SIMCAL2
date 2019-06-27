@@ -120,10 +120,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
                 val trocaTela = Intent(this, RelatorioActivity::class.java)
                 startActivity(trocaTela)
             }
-            R.id.rotina -> {
-                val trocaTela = Intent(this, RelatorioActivity::class.java)
-                startActivity(trocaTela)
-            }
+//            R.id.rotina -> {
+//                val trocaTela = Intent(this, RelatorioActivity::class.java)
+//                startActivity(trocaTela)
+//            }
             R.id.sobre -> {
                 val trocaTela = Intent(this, SobreActivity::class.java)
                 startActivity(trocaTela)

@@ -4,6 +4,10 @@ import java.io.Serializable
 
 
 data class Comodo constructor(var nome : String) : Serializable{
-    var dispositivos_conectados : ArrayList<Dispositivo> = arrayListOf()
+    var dispositivos_conectados : ArrayList<Dispositivo> = arrayListOf(
+        Dispositivo("teste1", this),
+        Dispositivo("teste2", this)
+
+    )
 
 }
