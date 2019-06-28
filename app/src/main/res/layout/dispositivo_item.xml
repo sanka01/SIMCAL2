@@ -26,14 +26,17 @@
                 android:id="@+id/nome_dispositivo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@drawable/btn_left_round"
                 android:fadingEdge="vertical|none"
-                android:text="NOME" />
+                android:text="NOME"
+                android:textSize="15sp" />
     
         <Button
                 android:id="@+id/modo"
                 android:layout_width="wrap_content"
+                android:textSize="15sp"
                 android:layout_height="wrap_content"
-                android:background="@drawable/btn_half_round"
+                android:background="@drawable/btn_right_round_on"
                 android:text="Ligado" />
     </LinearLayout>
 

@@ -32,8 +32,6 @@ class ListComodoAdapter(private val context: Context) : Adapter<ListComodoAdapte
             val trocaTela = Intent(context, ComodoActivity::class.java)
 
             if (Configuracoes.modo == Configuracoes.DELETE) {
-                Log.d("delete_recycle", ": $position")
-                Log.d("deleta_lista", ": ${Configuracoes.lista_comodos.get(position)}")
                 Configuracoes.lista_comodos.removeAt(position)
                 this.notifyItemRemoved(position)
 
@@ -42,8 +40,10 @@ class ListComodoAdapter(private val context: Context) : Adapter<ListComodoAdapte
                 Configuracoes.abrePopUp(context, Configuracoes.EDIT,position)
                 this.notifyItemChanged(position)
             }
-            else
+            else {
+                trocaTela.putExtra("posComodo",position)
                 context.startActivity(trocaTela)
+            }
         }
     }
 

@@ -39,4 +39,6 @@
     <string name="esse_aplicativo_foi_criado_como_trabalho_para_a_mat_ria_de_dispositivos_m_veis_na_unitins_ministrada_pelo_professor_jocivan_feito_pelos_alunos_emily_piazza_lopes_samuel_silva_morais_patrick_aires_nilvan">Esse Aplicativo foi criado como trabalho para a matéria de Dispositivos Móveis, na Unitins, ministrada pelo professor Jocivan. Feito pelos alunos: Emily Piazza lopes Samuel Silva Morais Patrick Aires Nilvan</string>
     <string name="cafeteira">Cafeteira</string>
     <string name="grafico">Grafico</string>
+    <string name="off">DESLIGADO</string>
+    <string name="on">LIGADO</string>
 </resources>

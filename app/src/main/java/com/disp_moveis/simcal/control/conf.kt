@@ -15,8 +15,8 @@ class Configuracoes {
         const val DELETE = 2
         const val SELECT = 0
 
-        var lista_dispositivos: ArrayList<Dispositivo> = arrayListOf()
         var modo: Int = 0
+        var modo_disp = 0
         var lista_comodos: MutableList<Comodo> = mutableListOf(
             Comodo("teste 0"),
             Comodo("teste 1"),
@@ -73,8 +73,18 @@ class Configuracoes {
             // Display the alert dialog on app interface
             dialog.show()
         }
+        fun addDispositivo(nome: String, comodoAdapter: ComodoAdapter): Boolean {
+            val novoDispositivo = Dispositivo(nome, comodoAdapter.comodo)
+            for (dispositivo: Dispositivo in comodoAdapter.comodo.dispositivos_conectados) {
+                if (dispositivo.nome == novoDispositivo.nome)
+                    return false
+            }
 
-        private fun addComodo(nome: String): Boolean {
+            comodoAdapter.comodo.dispositivos_conectados.add(novoDispositivo)
+            return true
+
+        }
+        fun addComodo(nome: String): Boolean {
             val novoComodo = Comodo(nome)
             for (comodo: Comodo in lista_comodos) {
                 if (comodo.nome == novoComodo.nome)
